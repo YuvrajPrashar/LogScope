@@ -1,6 +1,6 @@
-import React from 'react';
-import { FileText, Sun, Moon } from 'lucide-react';
-import { Switch } from '@/components/ui/switch';
+import React from "react";
+import { FileText, Sun, Moon } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 
 interface LandingHeaderProps {
   isDarkMode: boolean;

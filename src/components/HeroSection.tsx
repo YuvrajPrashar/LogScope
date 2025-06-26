@@ -1,6 +1,6 @@
-import React from 'react';
-import { Upload, Activity } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Upload, Activity } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
   isDarkMode: boolean;
@@ -18,9 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="container mx-auto px-6 py-24">
         <div className="text-center space-y-8 relative z-10">
           <div className="transform transition-all duration-1000 hover:scale-105">
-            <div
-              className="mb-8 opacity-0 animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:forwards]"
-            >
+            <div className="mb-8 opacity-0 animate-fade-in-up [animation-delay:0.1s] [animation-fill-mode:forwards]">
               <div
                 className={`inline-block px-4 py-2 rounded-full ${
                   isDarkMode
@@ -73,9 +71,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </p>
           </div>
 
-          <div
-            className="opacity-0 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:forwards]"
-          >
+          <div className="opacity-0 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:forwards]">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
                 onClick={onUploadClick}

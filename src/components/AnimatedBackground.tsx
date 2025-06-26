@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 interface AnimatedBackgroundProps {
   isDarkMode: boolean;
 }
 
-export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ isDarkMode }) => {
+export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
+  isDarkMode,
+}) => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Animated gradient mesh */}
@@ -53,13 +55,7 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ isDarkMo
         preserveAspectRatio="xMidYMid slice"
       >
         <defs>
-          <linearGradient
-            id="lineGradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop
               offset="0%"
               stopColor={

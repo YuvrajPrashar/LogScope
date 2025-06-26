@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const useLandingPage = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -8,18 +8,18 @@ export const useLandingPage = () => {
   // Apply theme to document
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   const navigateToUpload = () => {
-    navigate('/upload');
+    navigate("/upload");
   };
 
   const navigateToLogs = () => {
-    navigate('/logs');
+    navigate("/logs");
   };
 
   return {
