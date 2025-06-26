@@ -1,6 +1,6 @@
-import React from "react";
-import { Upload, Search, BarChart3 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import React from 'react';
+import { Upload, Search, BarChart3 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface WorkflowStep {
   step: string;
@@ -13,9 +13,7 @@ interface HowItWorksSectionProps {
   isDarkMode: boolean;
 }
 
-export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
-  isDarkMode,
-}) => {
+export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ isDarkMode }) => {
   const steps: WorkflowStep[] = [
     {
       step: "01",
@@ -65,7 +63,8 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({
           {steps.map((item, index) => (
             <div
               key={item.step}
-              className="text-center group animate-fade-in-up relative"
+              className="text-center group opacity-0 animate-fade-in-up relative"
+              data-animation-delay={`${index * 0.2}s`}
             >
               {/* Connection line */}
               {index < 2 && (

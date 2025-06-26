@@ -1,6 +1,13 @@
-import React from "react";
-import { BarChart3, Search, Filter, Flag, Activity, Zap } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import React from 'react';
+import {
+  BarChart3,
+  Search,
+  Filter,
+  Flag,
+  Activity,
+  Zap,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface Feature {
   icon: LucideIcon;
@@ -12,9 +19,7 @@ interface FeaturesSectionProps {
   isDarkMode: boolean;
 }
 
-export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
-  isDarkMode,
-}) => {
+export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ isDarkMode }) => {
   const features: Feature[] = [
     {
       icon: Search,
@@ -77,14 +82,15 @@ export const FeaturesSection: React.FC<FeaturesSectionProps> = ({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
+          {features.map((feature, index) => (
             <div
               key={feature.title}
               className={`group p-8 rounded-3xl transition-all duration-700 hover:scale-105 hover:-translate-y-4 cursor-pointer relative overflow-hidden ${
                 isDarkMode
                   ? "bg-slate-800/20 border border-slate-700/30 hover:bg-slate-700/20 hover:border-slate-600/40"
                   : "bg-white/60 border border-gray-200/40 hover:bg-white/90 hover:border-gray-300/60"
-              } backdrop-blur-xl hover:shadow-2xl animate-fade-in-up`}
+              } backdrop-blur-xl hover:shadow-2xl opacity-0 animate-fade-in-up`}
+              data-animation-delay={`${index * 0.1}s`}
             >
               {/* Card background glow */}
               <div

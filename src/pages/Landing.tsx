@@ -8,8 +8,12 @@ import { LandingFooter } from "@/components/LandingFooter";
 import { useLandingPage } from "@/hooks/useLandingPage";
 
 const Landing = () => {
-  const { isDarkMode, setIsDarkMode, navigateToUpload, navigateToLogs } =
-    useLandingPage();
+  const {
+    isDarkMode,
+    setIsDarkMode,
+    navigateToUpload,
+    navigateToLogs,
+  } = useLandingPage();
 
   return (
     <div
@@ -18,24 +22,24 @@ const Landing = () => {
       }`}
     >
       <AnimatedBackground isDarkMode={isDarkMode} />
-
+      
       <LandingHeader isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-
+      
       <HeroSection
         isDarkMode={isDarkMode}
         onUploadClick={navigateToUpload}
         onExploreClick={navigateToLogs}
       />
-
+      
       <FeaturesSection isDarkMode={isDarkMode} />
-
+      
       <HowItWorksSection isDarkMode={isDarkMode} />
-
+      
       <CTASection
         isDarkMode={isDarkMode}
         onGetStartedClick={navigateToUpload}
       />
-
+      
       <LandingFooter isDarkMode={isDarkMode} />
     </div>
   );

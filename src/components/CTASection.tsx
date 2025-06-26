@@ -1,6 +1,6 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface CTASectionProps {
   isDarkMode: boolean;
@@ -28,7 +28,9 @@ export const CTASection: React.FC<CTASectionProps> = ({
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="opacity-0 animate-fade-in-up [animation-fill-mode:forwards]">
+        <div
+          className="opacity-0 animate-fade-in-up [animation-fill-mode:forwards]"
+        >
           <h2
             className={`text-5xl font-bold mb-8 ${
               isDarkMode ? "text-white" : "text-gray-900"
